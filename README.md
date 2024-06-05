@@ -1,4 +1,4 @@
-# INSTALLATION GUIDE
+# DEPLOYMENT GUIDE
 
 # VM Requirement
 
