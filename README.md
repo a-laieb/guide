@@ -3,7 +3,7 @@
  - CPU: `4 vCPU Cores`
  - RAM: `6 GB`
  - STORAGE: `25 GB`
- - 
+ - OS: `UBUNTU 22.04`
 # Connecting to the VPS
 
 To connect your VPS server, you can use your server IP, you can create a root password and enter the server with your IP address and password credentials. But the more secure way is using an SSH key.
@@ -15,10 +15,7 @@ Creating SSH Key
 2. ```
    ssh-keygen -t rsa
    ```
-
-````
-
-3. Press `ENTER` to store the key in the default folder /Users/lamadev/.ssh/id_rsa).
+3. Press `ENTER` to store the key in the default folder /Users/amine/.ssh/id_rsa).
 
 4. Type a passphrase (characters will not appear in the terminal).
 
@@ -26,19 +23,19 @@ Creating SSH Key
 
 ```Your public key has been saved in /Users/amine/.ssh/id_rsa.pub.
 The key fingerprint is:
-ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:30 amine@mac.local
+SHA256:QFjMFz8flNR8Z6REPyWbuobETj7w4uif6bX9btQAykY amine@mac.local
 The key's randomart image is:
-+--[ RSA 2048]----+
-| |
-| . |
-| E . |
-| . . o |
-| o . . S . |
-| + + o . + |
-|. + o = o + |
-| o...o \* o |
-|. oo.o . |
-+-----------------+
++---[RSA 3072]----+
+|     =o .. .o=+.o|
+|    ..o ..E.o.o*=|
+|      .. oo...++o|
+|       . .+o o. .|
+|        S.+ o  o |
+|         B . .. .|
+|        . B o.   |
+|       o = =  .  |
+|     .oo* . .+o  |
++----[SHA256]-----+
 ````
 
 6. Copy your public SSH Key to your clipboard using the following code:
@@ -136,7 +133,7 @@ root /var/www/gfa/;
 ln -s /etc/nginx/sites-available/gfa /etc/nginx/sites-enabled/gfa
 ```
 
-Write your fist message
+##### Write your first message
 
 ```
 nano /var/www/gfa/index.html
@@ -146,9 +143,9 @@ nano /var/www/gfa/index.html
 systemctl start nginx
 ```
 
-## Start Nginx and check the page
+##### Start Nginx and check the page
 
-Uploading Apps Using Git
+## Uploading Apps Using Git
 
 ```
 apt install git
@@ -166,14 +163,13 @@ cd gfa
 git git clone <your repository>
 ```
 
-Nginx Configuration for new apps
+## Nginx Configuration for new apps
 
 ```
 nano /etc/nginx/sites-available/gfa
 ```
 
-If you check the location /api in your browser you are going to get "502" error which is good. Our configuration works. The only thing we need to is
-running our app
+##### If you check the location /api in your browser you are going to get "502" error which is good. Our configuration works. The only thing we need to is running our app
 
 ```
 sudo apt install -y curl
@@ -193,6 +189,11 @@ npm install
 
 ```
 nano .env
+```
+
+##### Copy and paste your env file
+```
+node index.js
 ```
 
 #### But if you close your ssh session here. It's gonna kill this process. To prevent this we are going to need a package which is called
