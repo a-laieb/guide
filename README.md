@@ -1,8 +1,8 @@
 # INSTALLATION GUIDE
 # VM Requirement
- - CPU: 4 vCPU Cores
- - RAM: 6 GB
- - STORAGE: 25 GB
+ - CPU: '4 vCPU Cores'
+ - RAM: '6 GB'
+ - STORAGE: '25 GB'
  - 
 # Connecting to the VPS
 
