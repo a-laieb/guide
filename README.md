@@ -1,6 +1,6 @@
 # INSTALLATION GUIDE
 # VM Requirement
- - CPU: '4 vCPU Cores'
+ - CPU: `4 vCPU Cores`
  - RAM: '6 GB'
  - STORAGE: '25 GB'
  - 
